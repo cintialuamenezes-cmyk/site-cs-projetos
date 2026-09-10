@@ -311,9 +311,14 @@
     .traj-band { position: absolute; width: 380px; height: 90px; background: var(--bordo); border: 2px solid var(--gold2); z-index: 0; }
     .traj-band.tl { top: -34px; left: -110px; transform: rotate(-8deg); }
     .traj-band.br { bottom: -34px; right: -110px; transform: rotate(-8deg); }
-    .traj-vertical { position: absolute; top: 50%; writing-mode: vertical-rl; font-size: 9px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--gold2); z-index: 1; }
-    .traj-vertical.left { left: 18px; transform: translateY(-50%) rotate(180deg); }
-    .traj-vertical.right { right: 18px; transform: translateY(-50%); }
+    .traj-margin { position: absolute; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; gap: 20px; z-index: 1; }
+    .traj-margin.left { left: 20px; }
+    .traj-margin.right { right: 20px; }
+    .traj-margin-cap { font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--bordo); writing-mode: vertical-rl; white-space: nowrap; }
+    .traj-margin-num { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700; color: var(--navy); writing-mode: vertical-rl; }
+    .traj-margin-rule { width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, var(--gold2), transparent); }
+    .traj-margin-vert { font-family: 'Playfair Display', serif; font-style: italic; font-size: 10px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: var(--gold2); writing-mode: vertical-rl; white-space: nowrap; }
+    .traj-margin.left .traj-margin-cap, .traj-margin.left .traj-margin-num, .traj-margin.left .traj-margin-vert { transform: rotate(180deg); }
     .traj-badge { text-align: center; font-size: 9px; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--gold2); margin-bottom: 26px; position: relative; z-index: 2; }
     .traj-poster { position: relative; max-width: 1100px; margin: 0 auto; z-index: 2; }
     .traj-poster-title2 { text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(38px,5.4vw,74px); line-height: .98; letter-spacing: -.02em; }
@@ -344,7 +349,7 @@
     @media (max-width: 860px) {
       .traj-cols { grid-template-columns: 1fr; gap: 30px; }
       .traj-col.cintia .traj-col-label { text-align: left; }
-      .traj-vertical, .traj-band { display: none; }
+      .traj-margin, .traj-band { display: none; }
       .traj-footer-row { flex-direction: column; gap: 20px; }
       .traj-foot.right { text-align: left; margin-left: 0; }
       .traj-foot.right hr { margin-left: 0; }
@@ -623,8 +628,20 @@
 <section id="trajetorias">
   <div class="traj-band tl"></div>
   <div class="traj-band br"></div>
-  <div class="traj-vertical left">Pessoas &bull; Ideias &bull; Impacto</div>
-  <div class="traj-vertical right">Pessoas &bull; Ideias &bull; Impacto</div>
+  <div class="traj-margin left">
+    <span class="traj-margin-cap">C&amp;S &middot; 2026</span>
+    <span class="traj-margin-rule"></span>
+    <span class="traj-margin-vert">Pessoas &bull; Ideias &bull; Impacto</span>
+    <span class="traj-margin-rule"></span>
+    <span class="traj-margin-num">01</span>
+  </div>
+  <div class="traj-margin right">
+    <span class="traj-margin-cap">Edi&ccedil;&atilde;o Trajet&oacute;rias</span>
+    <span class="traj-margin-rule"></span>
+    <span class="traj-margin-vert">Pessoas &bull; Ideias &bull; Impacto</span>
+    <span class="traj-margin-rule"></span>
+    <span class="traj-margin-num">02</span>
+  </div>
   <div class="traj-badge reveal">Propósito compartilhado &nbsp;&bull;&nbsp; 2026</div>
   <div class="traj-poster">
     <h2 class="traj-poster-title2 reveal d1">
