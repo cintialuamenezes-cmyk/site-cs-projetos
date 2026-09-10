@@ -13,13 +13,13 @@
       --gold:      #C9A43E;
       --gold-light:#E8C870;
       --gold-dark: #8B6B1E;
-      --cream:     #FBF8F2;
+      --cream:     #F9F6F0;
       --white:     #FFFFFF;
       --sage:      #A3B18A;
       --sage-light:#D4DFC4;
       --dark:      #100E08;
-      --forest:    #566B41;
-      --forest-lt: #EEF1E6;
+      --forest:    #1A2A4A;
+      --forest-lt: #F3E8E9;
       --bordo:     #5A1221;
       --navy:      #1A2A4A;
       --gold2:     #C5A45E;
@@ -327,10 +327,9 @@
     .traj-col.sheila .traj-col-label { color: var(--bordo); }
     .traj-col.cintia .traj-col-label { color: var(--navy); text-align: right; }
     .traj-col p { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.8; color: #333; }
-    .traj-col.cintia p { text-align: right; }
-    .traj-col p:first-of-type:first-letter { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; line-height: .72; }
-    .traj-col.sheila p:first-of-type:first-letter { color: var(--bordo); float: left; padding-right: 8px; }
-    .traj-col.cintia p:first-of-type:first-letter { color: var(--navy); float: right; padding-left: 8px; }
+    .traj-col p:first-of-type:first-letter { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; line-height: .72; float: left; padding-right: 8px; }
+    .traj-col.sheila p:first-of-type:first-letter { color: var(--bordo); }
+    .traj-col.cintia p:first-of-type:first-letter { color: var(--navy); }
     .traj-col hr { border: none; border-top: 1px solid var(--gold2); margin: 16px 0; }
     .traj-quote2 { max-width: 340px; margin: 0 auto 46px; text-align: center; }
     .traj-quote2 .mark { font-family: 'Playfair Display', serif; font-size: 52px; color: var(--gold2); line-height: .5; display: block; margin-bottom: 8px; }
@@ -344,8 +343,7 @@
     .traj-foot span { font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); }
     @media (max-width: 860px) {
       .traj-cols { grid-template-columns: 1fr; gap: 30px; }
-      .traj-col.cintia p, .traj-col.cintia .traj-col-label { text-align: left; }
-      .traj-col.cintia p:first-of-type:first-letter { float: left; padding-right: 8px; padding-left: 0; }
+      .traj-col.cintia .traj-col-label { text-align: left; }
       .traj-vertical, .traj-band { display: none; }
       .traj-footer-row { flex-direction: column; gap: 20px; }
       .traj-foot.right { text-align: left; margin-left: 0; }
