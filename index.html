@@ -326,7 +326,7 @@
     .traj-poster-title2 .l2 { color: var(--navy); display: block; }
     .traj-poster-subtitle2 { text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 300; font-size: 18px; color: var(--navy); margin: 18px auto 46px; max-width: 520px; }
     .traj-3col { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 40px; align-items: start; margin-bottom: 46px; }
-    .traj-photo-cover { border-radius: 10px; overflow: hidden; box-shadow: 0 30px 70px rgba(90,18,33,.18); border: 1px solid var(--gold2); }
+    .traj-photo-cover { margin-top: 70px; border-radius: 10px; overflow: hidden; box-shadow: 0 30px 70px rgba(90,18,33,.18); border: 1px solid var(--gold2); }
     .traj-photo-cover img { display: block; width: 100%; height: auto; }
     .traj-col-label { font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; margin-bottom: 10px; }
     .traj-col.sheila { text-align: right; padding-top: 70px; }
@@ -351,6 +351,7 @@
     @media (max-width: 860px) {
       .traj-3col { grid-template-columns: 1fr; gap: 24px; }
       .traj-col.sheila, .traj-col.cintia { text-align: left; padding-top: 0; }
+      .traj-photo-cover { margin-top: 0; }
       .traj-margin, .traj-band { display: none; }
       .traj-footer-row { flex-direction: column; gap: 20px; }
       .traj-foot.right { text-align: left; margin-left: 0; }
